@@ -3,7 +3,7 @@
 
 Name:           python-%{pypi_name}
 Version:        1.20.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Normalize audio via ffmpeg
 
 License:        MIT
@@ -62,6 +62,9 @@ sed -i -e 's@colorama>=0.4.3@colorama>=0.4.1@g' setup.py
 %{python3_sitelib}/ffmpeg_normalize-%{version}-py%{python3_version}.egg-info
 
 %changelog
+* Tue Aug 18 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1.20.1-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
+
 * Sat Jul 25 2020 Leigh Scott <leigh123linux@gmail.com> - 1.20.1-1
 - Update to 1.20.1
 
