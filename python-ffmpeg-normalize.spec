@@ -2,7 +2,7 @@
 %global pypi_name ffmpeg-normalize
 
 Name:           python-%{pypi_name}
-Version:        1.22.9
+Version:        1.22.10
 Release:        1%{?dist}
 Summary:        Normalize audio via ffmpeg
 
@@ -62,6 +62,9 @@ Batch processing of several input files is possible, including video files.
 %{python3_sitelib}/ffmpeg_normalize-%{version}-py%{python3_version}.egg-info
 
 %changelog
+* Tue Apr 26 2022 Leigh Scott <leigh123linux@gmail.com> - 1.22.10-1
+- Update to 1.22.10
+
 * Sun Apr 17 2022 Leigh Scott <leigh123linux@gmail.com> - 1.22.9-1
 - Update to 1.22.9
 
