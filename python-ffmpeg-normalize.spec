@@ -2,8 +2,8 @@
 %global pypi_name ffmpeg-normalize
 
 Name:           python-%{pypi_name}
-Version:        1.24.0
-Release:        2%{?dist}
+Version:        1.25.1
+Release:        1%{?dist}
 Summary:        Normalize audio via ffmpeg
 
 License:        MIT
@@ -62,6 +62,9 @@ Batch processing of several input files is possible, including video files.
 %{python3_sitelib}/ffmpeg_normalize-%{version}-py%{python3_version}.egg-info
 
 %changelog
+* Tue Aug 23 2022 Leigh Scott <leigh123linux@gmail.com> - 1.25.1-1
+- Update to 1.25.1
+
 * Sun Aug 07 2022 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 1.24.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_37_Mass_Rebuild and ffmpeg
   5.1
