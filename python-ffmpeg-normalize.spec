@@ -2,13 +2,13 @@
 %global pypi_name ffmpeg-normalize
 
 Name:           python-%{pypi_name}
-Version:        1.25.3
+Version:        1.26.0
 Release:        1%{?dist}
 Summary:        Normalize audio via ffmpeg
 
 License:        MIT
 URL:            https://github.com/slhck/ffmpeg-normalize
-Source0:        https://pypi.python.org/packages/source/f/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Source0:        %{pypi_source}
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -62,6 +62,9 @@ Batch processing of several input files is possible, including video files.
 %{python3_sitelib}/ffmpeg_normalize-%{version}-py%{python3_version}.egg-info
 
 %changelog
+* Thu Dec 15 2022 Leigh Scott <leigh123linux@gmail.com> - 1.26.0-1
+- Update to 1.26.0
+
 * Sun Nov 20 2022 Sérgio Basto <sergio@serjux.com> - 1.25.3-1
 - Update python-ffmpeg-normalize to 1.25.3
 
