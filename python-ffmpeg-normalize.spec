@@ -3,7 +3,7 @@
 
 Name:           python-%{pypi_name}
 Version:        1.27.4
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Normalize audio via ffmpeg
 
 License:        MIT
@@ -62,6 +62,9 @@ Batch processing of several input files is possible, including video files.
 %{python3_sitelib}/ffmpeg_normalize-%{version}-py%{python3_version}.egg-info
 
 %changelog
+* Sat Jul 08 2023 Leigh Scott <leigh123linux@gmail.com> - 1.27.4-2
+- Rebuilt for Python 3.12
+
 * Sun Jul 02 2023 Leigh Scott <leigh123linux@gmail.com> - 1.27.4-1
 - Update to 1.27.4
 
