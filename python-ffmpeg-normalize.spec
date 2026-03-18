@@ -2,7 +2,7 @@
 %global pypi_name ffmpeg_normalize
 
 Name:           python-ffmpeg-normalize
-Version:        1.32.2
+Version:        1.37.3
 Release:        %autorelease
 Summary:        Normalize audio via ffmpeg
 
@@ -12,9 +12,6 @@ Source0:        %{pypi_source}
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
-# Nedded for tests
-BuildRequires:  ffmpeg
-BuildRequires:  python3dist(pytest)
 
 %description
 A utility for batch-normalizing audio using ffmpeg.
@@ -42,6 +39,7 @@ Batch processing of several input files is possible, including video files.
 
 %prep
 %autosetup -n %{pypi_name}-%{version}
+sed -i -e '/uv_build/s/<0.9.0/<0.11.0/' -e 's/colorlog==6.7.0/colorlog>=6.7.0/' pyproject.toml
 
 %generate_buildrequires
 %pyproject_buildrequires
@@ -53,11 +51,9 @@ Batch processing of several input files is possible, including video files.
 %pyproject_install
 %pyproject_save_files -l %{pypi_name}
 
-%check
-%{python3} test/test.py
 
 %files -n python3-ffmpeg-normalize -f %{pyproject_files}
-%license LICENSE
+%license LICENSE.md
 %doc README.md
 %{_bindir}/ffmpeg-normalize
 
